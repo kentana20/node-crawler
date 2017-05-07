@@ -1,0 +1,14 @@
+{
+  "name": "node-crawler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "ssh://git@github.com/kentana20/node-crawler.git",
+  "author": "kentana20 <civic.b16b@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "eslint": "^3.19.0",
+    "lodash": "^4.17.4",
+    "request": "^2.81.0"
+  }
+}
