@@ -6,9 +6,12 @@
   "author": "kentana20 <civic.b16b@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "casperjs": "^1.1.3",
     "cheerio": "^0.22.0",
+    "cheerio-httpcli": "^0.6.11",
     "eslint": "^3.19.0",
     "lodash": "^4.17.4",
+    "pg": "^6.2.3",
     "request": "^2.81.0"
   }
 }
