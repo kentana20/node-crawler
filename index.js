@@ -2,6 +2,7 @@
 'use strict';
 
 const cli = require('cheerio-httpcli');
+const db = require('./lib/db');
 
 const url = 'http://www.skysports.com/premier-league-news';
 
@@ -29,5 +30,20 @@ cli.fetch(url, {initialCollectionKey: 1}, (error, $, res) => {
             url.trim()
         ];
         console.log(`idx: ${idx} --- ${JSON.stringify(target[idx])}`);
+
+        // DB Insert
+        db.query(target[idx], (err, res) => {
+            if (err) {
+                console.log(`error: ${err.message}`);
+                return;
+                // logger.error(`messageId: ${messageId} fail. error: ${err.stack}`);
+                // reject(err);
+            }
+
+            // logger.info(`messageId ${messageId} registed.`);
+            // resolve();
+            // setTimeout(resolve(), 1000);
+            console.log(`${idx} inserted.`);
+        });
     });
 });
